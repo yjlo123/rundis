@@ -1,0 +1,54 @@
+body {
+    font:16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+
+.console-view {
+    height: 500px;
+    text-align: left;
+    background-color: #1a1a1a;
+}
+
+#console {
+    width: 500px;
+    height: 500px;
+}
+
+.app-info {
+    width: 500px;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+/* The current prompt text color */
+.jqconsole-prompt {
+    color: white;
+    background: none;
+}
+
+/* The command history */
+.jqconsole-old-prompt {
+	color: white;
+    font-weight: normal;
+    background: none;
+}
+/* The text color when in input mode. */
+.jqconsole-input {
+	color: #ddd;
+    font-weight: normal;
+    background: none;
+	padding-left: 2px;
+}
+/* Previously entered input. */
+.jqconsole-old-input {
+	color: #bbb;
+	font-weight: normal;
+	background: none;
+	padding-left: 2px;
+}
