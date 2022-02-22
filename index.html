@@ -28,36 +28,15 @@
 			<p>View source code <a href="https://runtime.siwei.dev/?src=rundis" target="_blank">here</a>.</p>
 		</div>
 		<footer>
-			<small>&copy; Copyright 2020 <a href="https://liusiwei.com/">liusiwei.com</a></small>
+			<small>&copy; Copyright <span id="year"></span> <a href="https://liusiwei.com/">liusiwei.com</a></small>
 		</footer>
 	</div>
 	<script src="https://runtime.siwei.dev/src/parser.js"></script>
 	<script src="https://runtime.siwei.dev/src/evaluator.js"></script>
 	<script src="https://runtime.siwei.dev/src/executer.js"></script>
 	<script src="js/source.js"></script>
-
-<script>
-let runtime = runtimeExecuter();
-let evaluator = runtimeEvaluator();
-let parser = runtimeParser();
-
-let jqconsole = $('#console').jqconsole();
-jqconsole.Write('Rundis v0.1\nType `help` to see the available commands.\n', 'console-gray');
-jqconsole.SetPromptLabel('');
-
-runtime.config(parser, evaluator, null, jqconsole, null, {});
-
-let startPrompt = function () {
-	jqconsole.Prompt(true, function (input) {
-		jqconsole.Write('[Session Ended]\nPlease refresh this page to start a new session.', 'console-default');
-	});
-}
-startPrompt();
-
-runtime.restart();
-runtime.executeAll(null, rundisSrc);
-
-</script>
+	<script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>
